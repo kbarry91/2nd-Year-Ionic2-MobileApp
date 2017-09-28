@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+
+.myImage{
+		background-size : 50% auto;
+}
+img {
+	max-width : 100%;
+	max-height: 100%;
+}

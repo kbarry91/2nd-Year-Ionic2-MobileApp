@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+	<!-- <script src="js/myProjectJs.js"></script>-->
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+	<!-- Here is my header -->
+      <ion-header-bar class="bar bar-header bar-dark">
+        <h1 class="title">Multi-Use App</h1>
+      </ion-header-bar>
+	  
+	<!-- Here is my subheader -->
+		<div class="bar bar-subheader bar-balanced">
+			<h2 class="title"><b>Geolocation</b></h2>
+		</div>
+	
+	<!-- Here is my footer -->	
+	<div class="bar bar-footer bar-dark tabs-background-dark">
+  
+         <!-- This code is uswed to create taps with icon on top-->
+        <div class="tabs tabs-icon-top tabs-background-dark tabs-color-balanced">
+             
+            <a href="index.html" class="tab-item">
+                <i  class="icon ion-home"></i>
+                HomePage
+              </a>
+            
+              <a href="camera.html" class="tab-item">
+                <i class="icon ion-camera"></i>
+                Camera
+              </a>
+            
+              <a href="location.html" class="tab-item">
+                <i class="icon ion-map"></i>
+                 Geolocation
+              </a>
+			  <a href="converter.html" class="tab-item">
+                <i class="icon ion-calculator"></i>
+                 Converter
+              </a>
+        </div>
+	</div>
+
+	
+		<ion-content class="padding has-header has-subheader">
+		<!-- Here is my footer -->	
+			<p>Ever wonder were you are? Click <strong>"Check Your Current Location"</strong> to view your crrent location</p>
+			<p>For this function to work please ensure to turn on your GPS settings on your device</p>
+         
+			<button id="locationGetter" class=" bar button button-full bar-balanced" onclick="getPosition()">Check Your Current Location</button>
+			<div class="list card">
+		  <div class="item item-avatar">
+			<img src="img/mapIcon.png">
+			<h2>Your Current Location</h2>
+			<p id = "locDate">December 2016</p>
+		  </div>
+		  
+		  <div class="item item-body">
+			
+			<p id = "locDetails">
+			 Your location details will appear here.
+			</p>
+		  </div>
+		</div>
+       
+			<ion-list>
+				<div class="item center-text item-divider ">
+					Your locations
+				</div>
+			
+			<!-- list item -->	
+				<ion-item class="item-avatar item-button-right">
+					
+					Location 1
+					<p id="location">No Current Locations</p> <!--Item counter-->
+					
+				</ion-item>
+			
+				
+			</ion-list>
+        
+          
+		<br><br>  <!--add spaces-->
+      </ion-content>
+        
+    </ion-pane>
+	
+  </body>
+</html>

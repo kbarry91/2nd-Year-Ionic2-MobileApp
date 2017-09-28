@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+	 <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+	<!-- Here is my header -->
+      <ion-header-bar class="bar bar-header bar-dark">
+        <h1 class="title">Multi-Use App</h1>
+      </ion-header-bar>
+	  
+	<!-- Here is my subheader -->
+		<div class="bar bar-subheader bar-balanced">
+			<h2 class="title"><b>Welcome To The Homepage</b></h2>
+		</div>
+	
+	<!-- Here is my footer -->	
+	<div class="bar bar-footer bar-dark tabs-background-dark">
+  
+         <!-- This code is uswed to create taps with icon on top-->
+        <div class="tabs tabs-icon-top tabs-background-dark tabs-color-balanced">
+             
+            <a class="tab-item">
+                <i href="index.html" class="icon ion-home"></i>
+                HomePage
+              </a>
+            
+              <a href="camera.html" class="tab-item">
+                <i class="icon ion-camera"></i>
+                Camera
+              </a>
+            
+              <a href="location.html" class="tab-item">
+                <i class="icon ion-map"></i>
+                 Geolocation
+              </a>
+			  <a href="converter.html" class="tab-item">
+                <i class="icon ion-calculator"></i>
+                 Converter
+              </a>
+        </div>
+	</div>
+
+	
+      <ion-content class="padding has-subheader">
+		<!-- Here is my content -->	
+		
+           <img class="full-image" src="img/appPic1.jpg"><!--adds image-->
+		
+		<div class="list card">
+		  <div class="item item-avatar">
+			<img src="img/cameraicon.png">
+			<h2>Camera</h2>
+			<p>December 2016</p>
+		  </div>
+		  
+		  <div class="item item-body">
+			<img class="full-image" src="img/scenicPic.jpg">
+			<p>
+			 This App contains a brillant Camera function. To use the camera function click into the "camera" tab located on the bottom of the screen.
+			 You will be able to take a photo, view a photo and open your Gallery to see previously taken photos.
+			</p>
+		  </div>
+		</div>
+		
+   		<div class="list card">
+		  <div class="item item-avatar">
+			<img src="img/mapIcon.png">
+			<h2>Check Your Location</h2>
+			<p>December 2016</p>
+		  </div>
+		  
+		  <div class="item item-body">
+			<img class="full-image" src="img/location.jpg">
+			<p>
+			 With this function you are able to view your current location. The application uses your GPS in order to recieve your location.
+			 You will be able to gather the following data ; Latitude, Longitude, Altitude, Accuracy, Altitude Accuracy, Heading, Speed and Timestamp. 
+			</p>
+		  </div>
+		</div>
+		
+        	<div class="list card">
+		  <div class="item item-avatar">
+			<img src="img/conc.ico">
+			<h2>Handy Converter</h2>
+			<p>December 2016</p>
+		  </div>
+		  
+		  <div class="item item-body">
+			<img class="full-image" src="img/convert.png">
+			<p>
+			 This function allows you to use some of the most commonly used converters. to launch the converter simply click on the converter tab.
+			</p>
+		  </div>
+		</div>	
+         
+ 
+        
+          
+		<br><br>  <!--add spaces-->
+      </ion-content>
+        
+    </ion-pane>
+	
+  </body>
+</html>

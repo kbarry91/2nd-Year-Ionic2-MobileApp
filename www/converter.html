@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+	<script src="js/converter.js"></script>
+    <script src="js/app.js"></script>
+	
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+	<!-- Here is my header -->
+      <ion-header-bar class="bar bar-header bar-dark">
+        <h1 class="title">Multi-Use App</h1>
+      </ion-header-bar>
+	  
+	<!-- Here is my subheader -->
+	<!--	<div class="bar bar-subheader bar-balanced">
+			<h2 class="title"><b>Handy Converter</b></h2>
+		</div>
+	-->	
+		<ion-header-bar class="bar bar-subheader  bar-balanced">
+			<h2 class="title"><b>Handy Converter</b></h2>
+		</ion-header-bar>  	
+	<!-- Here is my footer -->	
+	<div class="bar bar-footer bar-dark tabs-background-dark">
+  
+         <!-- This code is uswed to create taps with icon on top-->
+        <div class="tabs tabs-icon-top tabs-background-dark tabs-color-balanced">
+             
+            <a href="index.html" class="tab-item">
+                <i class="icon ion-home"></i>
+                HomePage
+            </a>
+            
+             <a href="camera.html" class="tab-item">
+                <i class="icon ion-camera"></i>
+                Camera
+            </a>
+            
+            <a href="location.html" class="tab-item">
+                <i class="icon ion-map"></i>
+                Geolocation
+            </a>
+			<a href="converter.html" class="tab-item">
+                <i class="icon ion-calculator"></i>
+                Converter
+            </a>
+        </div>
+	</div>
+
+	
+		<ion-content class="has-header has-subheader" padding="true">
+			<!-- Divide list items -->
+			<div class="item center-text item-divider ">
+			Miles To Kilometres Converter
+			</div>
+			
+			<!-- Creates input box -->
+			<div class="item item-input">
+				<input id="inputMiles" placeholder="
+				Enter Distance in Miles" type="number" min="1"><br>
+			</div>
+			
+			<div class="padding text-center">
+		
+			<!--Creates button with image (class)-->
+			<button onclick="calcMtk()" class="button button-outline icon-right ion-calculator button-dark">Calculate Miles to Kilometres</button>
+			</div>
+        
+         	<h5 id="mtkOutput"></h5>
+			
+ <!-- Divide list items -->
+			<div class="item center-text item-divider ">
+			Kilometres To Miles Converter
+			</div>
+			
+			<!-- Creates input box -->
+			<div class="item item-input">
+				<input id="inputKilom" placeholder="
+				Enter Distance in Kilometres" type="number" min="1"><br>
+			</div>
+			
+			<div class="padding text-center">
+		
+			<!--Creates button with image (class)-->
+			<button onclick="calcKtm()" class="button button-outline icon-right ion-calculator button-dark">Calculate Kilometres To Miles</button>
+			</div>
+        
+         	<h5 id="ktmOutput"></h5>
+			 <!--addd local storage-->
+			 <div class="padding text-center">
+		
+			<!--Creates button with image (class)-->
+			<button onclick="viewCon()" class="
+			button button-outline icon-right
+			ion-calculator button-dark">View Conversions</button>
+		</div>
+         <div class="list card">
+		  <div class="item item-avatar">
+			<img src="img/Save.png">
+			<h2>Saved Conversions</h2>
+			<p id = "localConv">December 2016</p>
+		  </div>
+		  
+		  <div class="item item-body">
+			<p id = "localConvert">
+			Conversion details
+			</p>
+		  </div>
+		  
+		 
+		  
+		</div>
+          
+		<br><br>  <!--add spaces-->
+      </ion-content>
+        
+    </ion-pane>
+	
+  </body>
+</html>
