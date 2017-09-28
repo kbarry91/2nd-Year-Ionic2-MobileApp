@@ -3,7 +3,8 @@
 ## Author  : Kevin Barry
 
 ###### Project : Summary:
-	WorkshopPro , The workshop helper app. This app has been developed as a project in my second year of Software developement for the module Mobile Application Developemnt. As I was extremely busy at the time the assignment was handed to us I 
+	WorkshopPro , The workshop helper app. This app has been developed as a project in my second 
+	year of Software developement for the module Mobile Application Developemnt. As I was extremely busy at the time the assignment was handed to us I 
 	decided to build an application that would would meet the epectations of the criteria we had 
 	whilst also being usefull to me .
 
@@ -43,11 +44,11 @@
 	
 	In command prompt :
 	
-'''
+,,,
 	npm install
 	mkdir www 
 	ionic state restore
-'''
+,,,
 
 	At this stage you can simpley navigate into the projects directory and run the ionic serve command and 
 	the application will be opened in the browser window. You may have to install the plugins callNumber, 
