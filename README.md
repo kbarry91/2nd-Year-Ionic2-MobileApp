@@ -4,7 +4,8 @@
 
 ###### Project : Summary:
 	WorkshopPro , The workshop helper app. This app has been developed as a project in my second 
-	year of Software developement for the module Mobile Application Developemnt. As I was extremely busy at the time the assignment was handed to us I 
+	year of Software developement for the module Mobile Application Developemnt. As I was 
+	extremely busy at the time the assignment was handed to us I 
 	decided to build an application that would would meet the epectations of the criteria we had 
 	whilst also being usefull to me .
 
@@ -44,22 +45,22 @@
 	
 	In command prompt :
 	
-,,,
+
 	npm install
-	mkdir www 
+	mkdir www
 	ionic state restore
-,,,
+
 
 	At this stage you can simpley navigate into the projects directory and run the ionic serve command and 
 	the application will be opened in the browser window. You may have to install the plugins callNumber, 
 	SMS and flashlight in order to getr them to work using your cloned project.
 	
-'''
-C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-SMS 
-C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-callNumber 
-C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-flashlight 
-C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-firebase
-'''
+
+	C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-SMS 
+	C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-callNumber 
+	C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-flashlight 
+	C:>npm install -g cordova cordova platform add android --save cordova plugin add cordova-plugin-firebase
+
 
 ###### How the App works:
 	Once you run the app you will be greeted by the home screen which will give a brief explination what the
